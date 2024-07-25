@@ -1,9 +1,11 @@
 import * as React from "react";
 import GlobalStyles from "@mui/joy/GlobalStyles";
+import DashboardIcon from "@mui/icons-material/Dashboard";
 import Avatar from "@mui/joy/Avatar";
 import Box from "@mui/joy/Box";
 import Button from "@mui/joy/Button";
 import Card from "@mui/joy/Card";
+import HomeIcon from "@mui/icons-material/Home";
 import Chip from "@mui/joy/Chip";
 import Divider from "@mui/joy/Divider";
 import IconButton from "@mui/joy/IconButton";
@@ -122,7 +124,7 @@ export default function Sidebar() {
         <IconButton variant="soft" color="primary" size="sm">
           <BrightnessAutoRoundedIcon />
         </IconButton>
-        <Typography level="title-lg">Acme Co.</Typography>
+        <Typography level="title-lg">Publec Health</Typography>
         <ColorSchemeToggle sx={{ ml: "auto" }} />
       </Box>
       <Input
@@ -151,61 +153,12 @@ export default function Sidebar() {
           }}
         >
           <ListItem>
-            <ListItemButton>
-              <HomeRoundedIcon />
-              <ListItemContent>
-                <Typography level="title-sm">Home</Typography>
-              </ListItemContent>
-            </ListItemButton>
-          </ListItem>
-
-          <ListItem>
-            <ListItemButton>
-              <DashboardRoundedIcon />
-              <ListItemContent>
-                <Typography level="title-sm">Dashboard</Typography>
-              </ListItemContent>
-            </ListItemButton>
-          </ListItem>
-
-          <ListItem>
             <ListItemButton selected>
-              <ShoppingCartRoundedIcon />
+              <HomeIcon />
               <ListItemContent>
-                <Typography level="title-sm">Orders</Typography>
+                <Typography level="title-sm">หน้าหลัก</Typography>
               </ListItemContent>
             </ListItemButton>
-          </ListItem>
-
-          <ListItem nested>
-            <Toggler
-              renderToggle={({ open, setOpen }) => (
-                <ListItemButton onClick={() => setOpen(!open)}>
-                  <AssignmentRoundedIcon />
-                  <ListItemContent>
-                    <Typography level="title-sm">Tasks</Typography>
-                  </ListItemContent>
-                  <KeyboardArrowDownIcon
-                    sx={{ transform: open ? "rotate(180deg)" : "none" }}
-                  />
-                </ListItemButton>
-              )}
-            >
-              <List sx={{ gap: 0.5 }}>
-                <ListItem sx={{ mt: 0.5 }}>
-                  <ListItemButton>All tasks</ListItemButton>
-                </ListItem>
-                <ListItem>
-                  <ListItemButton>Backlog</ListItemButton>
-                </ListItem>
-                <ListItem>
-                  <ListItemButton>In progress</ListItemButton>
-                </ListItem>
-                <ListItem>
-                  <ListItemButton>Done</ListItemButton>
-                </ListItem>
-              </List>
-            </Toggler>
           </ListItem>
 
           <ListItem>
@@ -214,13 +167,10 @@ export default function Sidebar() {
               component="a"
               href="/joy-ui/getting-started/templates/messages/"
             >
-              <QuestionAnswerRoundedIcon />
+              <DashboardIcon />
               <ListItemContent>
-                <Typography level="title-sm">Messages</Typography>
+                <Typography level="title-sm">ขึ้นทะเบียนสำเร็จ</Typography>
               </ListItemContent>
-              <Chip size="sm" color="primary" variant="solid">
-                4
-              </Chip>
             </ListItemButton>
           </ListItem>
 
@@ -230,7 +180,7 @@ export default function Sidebar() {
                 <ListItemButton onClick={() => setOpen(!open)}>
                   <GroupRoundedIcon />
                   <ListItemContent>
-                    <Typography level="title-sm">Users</Typography>
+                    <Typography level="title-sm">User management</Typography>
                   </ListItemContent>
                   <KeyboardArrowDownIcon
                     sx={{ transform: open ? "rotate(180deg)" : "none" }}
@@ -272,17 +222,17 @@ export default function Sidebar() {
           <ListItem>
             <ListItemButton>
               <SupportRoundedIcon />
-              Support
+              ช่วยเหลือ
             </ListItemButton>
           </ListItem>
           <ListItem>
             <ListItemButton>
               <SettingsRoundedIcon />
-              Settings
+              ตั้งค่า
             </ListItemButton>
           </ListItem>
         </List>
-        <Card
+        {/* <Card
           invertedColors
           variant="soft"
           color="warning"
@@ -311,7 +261,7 @@ export default function Sidebar() {
           <Button size="sm" variant="solid">
             Upgrade plan
           </Button>
-        </Card>
+        </Card> */}
       </Box>
       <Divider />
       <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
@@ -321,8 +271,8 @@ export default function Sidebar() {
           src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=286"
         />
         <Box sx={{ minWidth: 0, flex: 1 }}>
-          <Typography level="title-sm">Siriwat K.</Typography>
-          <Typography level="body-xs">siriwatk@test.com</Typography>
+          <Typography level="title-sm">Chakrit A.</Typography>
+          <Typography level="body-xs">abl.chakrit@gmail.com</Typography>
         </Box>
         <IconButton size="sm" variant="plain" color="neutral">
           <LogoutRoundedIcon />

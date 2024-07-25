@@ -20,7 +20,13 @@ export default function JoyOrderDashboardTemplate() {
   return (
     <CssVarsProvider disableTransitionOnChange>
       <CssBaseline />
-      <Box sx={{ display: "flex", minHeight: "100dvh" }}>
+      <Box
+        sx={{
+          fontFamily: "'Chakra Petch', sans-serif",
+          display: "flex",
+          minHeight: "100dvh",
+        }}
+      >
         <Header />
         <Sidebar />
         <Box
@@ -64,11 +70,8 @@ export default function JoyOrderDashboardTemplate() {
                 fontSize={12}
                 fontWeight={500}
               >
-                Dashboard
+                หน้าแรก
               </Link>
-              <Typography color="primary" fontWeight={500} fontSize={12}>
-                Orders
-              </Typography>
             </Breadcrumbs>
           </Box>
           <Box
@@ -83,7 +86,7 @@ export default function JoyOrderDashboardTemplate() {
             }}
           >
             <Typography level="h2" component="h1">
-              Orders
+              รายการขอขึ้นทะเบียน
             </Typography>
             <Button
               color="primary"
@@ -94,7 +97,7 @@ export default function JoyOrderDashboardTemplate() {
             </Button>
           </Box>
           <OrderTable />
-          <OrderList />
+          {/* <OrderList /> */}
         </Box>
       </Box>
     </CssVarsProvider>
